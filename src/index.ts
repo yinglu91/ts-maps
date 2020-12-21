@@ -13,6 +13,8 @@ customMap.addMarker(company);
 console.log(user);
 console.log(company);
 
+// run by: $parcel index.html
+
 
 
 
