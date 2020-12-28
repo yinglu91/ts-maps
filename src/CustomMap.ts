@@ -1,5 +1,3 @@
-// Insstructions to every other class
-// on how they can be an argument to 'addMarker'
 export interface Mappable {
   location: {
     lat: number;
@@ -29,7 +27,9 @@ export class CustomMap {
         lat: mappable.location.lat,
         lng: mappable.location.lng
       }
-    })
+    });
+
+    
 
     marker.addListener('click', () => {
       const infoWindow = new google.maps.InfoWindow({
@@ -37,6 +37,6 @@ export class CustomMap {
       });
 
       infoWindow.open(this.googleMap, marker);
-    })
+    });
   }
 }

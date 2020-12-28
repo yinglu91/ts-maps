@@ -1,18 +1,18 @@
-import faker from 'faker'
+import faker from 'faker';
 import { Mappable } from './CustomMap';
 
-// Optional implements clause
-export class Company implements Mappable{
+// Optional implements clause in ts
+export class Company implements Mappable {
   companyName: string;
   catchPhrase: string;
   location: {
     lat: number;
     lng: number;
   };
-  color: string = "black";
+  color: string = 'yello';
 
   constructor() {
-    this.companyName =  faker.company.companyName();
+    this.companyName = faker.company.companyName();
     this.catchPhrase = faker.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
@@ -24,8 +24,8 @@ export class Company implements Mappable{
     return `
       <div>
         <h1>Company Name: ${this.companyName}</h1>
-        <h3>CatchPhrase: ${this.catchPhrase}</h3>
+        <h3>catchPhrase: ${this.catchPhrase}</h3>
       </div>
-    `
+    `;
   }
 }
